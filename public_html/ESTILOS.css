@@ -10,7 +10,7 @@ and open the template in the editor.
 
 #cabecera {
  text-align: center;
-    font-size: 20px; 
+    font-size: 25px; 
     font-family:  Times New Roman;
     background: #38537f;
       
@@ -37,11 +37,11 @@ UL LI{
 }
 
 form{
-    width:700px;
+    width:600px;
     background: #bcc5d3;
     padding: 1em;
     margin:  0 auto;
-    border-radius: 50px;
+    border-radius: 45px;
     text-align: left;    
 }
     
@@ -54,7 +54,7 @@ img{
 #Cuerpo {
     
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
        }
        
 
@@ -62,7 +62,7 @@ img{
        
 #pie {
     text-align: center;
-    font-size: 15px; 
+    font-size: 20px; 
     font-family:  Times New Roman;
     background: #38537f;
 }
@@ -79,3 +79,66 @@ img{
      }
      
      
+     
+     
+     #block_1
+	{
+	float: left;
+	width: 25%;
+	margin-left: 25%;
+        font-size: 20px; 
+        font-family:  Times New Roman;
+        text-align: left;
+	}
+* html #block_1
+	{
+	display: inline;
+	}
+#block_2
+	{
+	float: left;
+	width: 65%;
+	margin-left: 65%;
+        font-size: 20px; 
+        font-family:  Times New Roman;
+        text-align: right;
+	}
+/* we need this for IE 5.01 - otherwise the wrapper does not expand to the
+necessary height (unless fixed, this problem becomes even more acute 
+weirdness as the method is enhanced */
+#wrapper
+	{
+/* Normally a Holly-style hack height: 1% would suffice but that causes 
+IE 5.01 to completely collapse the wrapper - instead we float it */
+	float: left;
+/* NB. possibly only IE 5.01 needs to get this float value - otherwise 5.5 sometimes 
+(I saw it happen many moons ago) makes the width of wrapper too small 
+the float: none with the comment is ignored by 5.01,
+5.5 and above see it and carry on about their business
+It's probably fine to just remove it, but it's left here 
+just in case that many moons ago problem rears its head again */
+	float/**/: none;
+	}
+/* easy clearing */
+#wrapper:after
+	{
+	content: '[DO NOT LEAVE IT IS NOT REAL]'; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+	}
+#wrapper
+	{
+	display: inline-block;
+	}
+/*\*/
+#wrapper
+	{
+	display: block;
+	}
+/* end easy clearing */
+#footer
+	{
+	clear: both;
+	}
